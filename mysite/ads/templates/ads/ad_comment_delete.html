@@ -1,0 +1,15 @@
+{% extends "base_menu.html" %}
+{% block content %}
+<head>
+    <meta name="dj4e" content="445e24b5f22cacb9d51a837c10e91a3f">
+    <meta name="dj4e-code" content="42160080210090">
+</head>
+<h1>Delete Comment</h1>
+
+<p>Are you sure you want to delete the comment: {{ comment.text }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+</form>
+{% endblock %}
